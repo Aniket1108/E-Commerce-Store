@@ -1,0 +1,102 @@
+.Navbar {
+    width: 100%;
+    height: 80px;
+
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+
+    li {
+        list-style: none;
+        cursor: pointer;
+    }
+
+    .logo {
+        font-size: 2.4rem;
+        font-weight: 500;
+        color: #db8ede;
+        margin-right: 25px;
+    }
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        color: gray;
+        font-size: 1.2rem;
+    }
+    .right, .left {
+        display: flex;
+        align-items: center;
+        width: 180px;
+        justify-content: space-between;
+    }
+    .signup {
+        padding: 0.1em 0.8em;
+        background-color: #0275d8;
+        border-radius: 10px;
+        color: #fff;
+        text-align: center;
+        line-height: 35px;
+    }
+}
+
+.togglebtn {
+    width: 40px;
+    height: 30px;
+    // background-color: red;
+    z-index: 3;
+    cursor: pointer;
+
+    .bar{
+        width: 100%;
+        height: 4px;
+        background-color: #0275d8;
+        border-radius: 2px;
+        margin-top: 5px;
+    }
+
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .Navbar {
+        justify-content: center;
+        .logo{
+            margin: 0;
+        }
+        .togglebtn{
+            display: block;
+            position: absolute;
+            left: 15px;
+            top: 25px;
+        }
+
+        .list {
+            position: absolute;
+            width: 100%;
+            background: whitesmoke;
+            z-index: 4;
+            height: calc(100vh - 80px);
+            top: -100%;
+            transition: all ease-in-out 0.8s;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 80px;
+        }
+
+        .links{
+            margin-top: 25px;
+        }
+        .left, .right{
+            flex-direction: column;
+            
+        }
+        .list.active{
+            top: 0;
+        }
+    }
+}
