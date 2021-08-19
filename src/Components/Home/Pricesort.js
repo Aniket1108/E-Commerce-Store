@@ -22,7 +22,7 @@ export default function App() {
         <div className="pricesort">
             <Swiper
                 slidesPerView={1}
-                spaceBetween={10}
+                spaceBetween={1}
                 navigation={true}
                 pagination={{
                     clickable: true
@@ -39,6 +39,10 @@ export default function App() {
                     "1024": {
                         slidesPerView: 4,
                         spaceBetween: 50
+                    },
+                    "1444": {
+                        slidesPerView: 5,
+                        spaceBetween: 50
                     }
                 }}
                 className="mySwiper"
@@ -49,7 +53,7 @@ export default function App() {
                         <SwiperSlide>
                             <div className="card">
                                 <img src={product.img} alt={product.name} />
-                                <Link to={`/product/${product.id}`}>{product.name} </Link>
+                                <Link className="link" to={`/product/${product.id}`}>{product.name} </Link>
                                 <div> {product.price} Rs</div>
                             </div>
                         </SwiperSlide>

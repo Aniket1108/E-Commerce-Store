@@ -4,6 +4,8 @@ import frameslider from "../../img/frameslider.jpg"
 import handleriser from "../../img/handleriser.jpg"
 import paddockstand from "../../img/paddockstand.jpg"
 import radiatorguard from "../../img/radiatorguard.jpg"
+import kneeguard from "../../img/kneeguard.jpg"
+import xFlasher from "../../img/xFlasher.jpg"
 
 
 export const ProductsData = [
@@ -11,7 +13,7 @@ export const ProductsData = [
         id:"1",
         img:radiatorguard,
         name:"Radiator Guard",
-        description:"",
+        description:"It will protect guard from rocks and chips suitavle for all models of ktm and Husqvarna Bikes. Models - Duke 200, 250, 390, svartpilen and vipilen 250",
         price:"2000"
     },
     {
@@ -48,5 +50,19 @@ export const ProductsData = [
         name:"Fog Lamps",
         description:"",
         price:"600"
+    },
+    {
+        id:"7",
+        img:kneeguard,
+        name:"Knee Guard",
+        description:"",
+        price:"1300"
+    },
+    {
+        id:"8",
+        img:xFlasher,
+        name:"xFlasher",
+        description:"",
+        price:"1150"
     },
 ]

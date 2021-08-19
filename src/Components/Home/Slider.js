@@ -5,9 +5,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.min.css";
 import "swiper/components/navigation/navigation.min.css"
 import "./home.scss";
-import SwiperCore, {Navigation} from 'swiper/core';
+import SwiperCore, { Navigation } from 'swiper/core';
+
+import home from "../../img/home.png"
+import kawasaki from "../../img/kawasaki.jpg"
+import gear from "../../img/gear.png"
+
 
 SwiperCore.use([Navigation]);
+
 
 
 const Slider = () => {
@@ -17,7 +23,9 @@ const Slider = () => {
   return (
     <>
       <Swiper navigation={true} className="mySwiper">
-        <SwiperSlide>Slide 1</SwiperSlide><SwiperSlide>Slide 2</SwiperSlide><SwiperSlide>Slide 3</SwiperSlide><SwiperSlide>Slide 4</SwiperSlide><SwiperSlide>Slide 5</SwiperSlide><SwiperSlide>Slide 6</SwiperSlide><SwiperSlide>Slide 7</SwiperSlide><SwiperSlide>Slide 8</SwiperSlide><SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide><img src={home} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={kawasaki} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={gear} alt="" /></SwiperSlide>
       </Swiper>
     </>
   )

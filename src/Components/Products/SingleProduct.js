@@ -5,13 +5,29 @@ import { ProductsData } from './ProductsData'
 const SingleProduct = () => {
 
     const { id } = useParams();
-    
+
     return (
-        <div>
+        <div className="SingleProduct">
             {ProductsData.filter(card => card.id === id).map((card) => {
-                return(
-                    <div key={card.id}>
-                        <h2>{card.name}</h2>
+                return (
+                    <div className="card" key={card.id}>
+                        <img src={card.img} alt={card.name} />
+                        <div className="info">
+                            <h2>{card.name}</h2>
+                            <p className="price">{card.price} Rs</p>
+                            <p>{card.description}</p>
+                            <div>
+                                <button className="cart">Add to Cart</button>
+                                <button className="buy">Buy Now</button>
+                            </div>
+                            <div className="review">
+                                <h3>Reviews</h3>
+                                <p>{card.review}</p>
+                            </div>
+                        </div>
+                        <div>
+                            
+                        </div>
                     </div>
                 )
             })}
