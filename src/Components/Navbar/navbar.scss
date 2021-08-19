@@ -8,9 +8,10 @@
     align-items: center;
     padding: 0 25px;
 
-    li {
+    .links {
         list-style: none;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .logo {

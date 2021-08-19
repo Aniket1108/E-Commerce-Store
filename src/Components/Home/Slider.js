@@ -1,43 +1,25 @@
-import React, { useState } from 'react';
-import { SliderData } from './SliderData';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-import "./slider.scss"
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const ImageSlider = ({ slides }) => {
-  const [current, setNextSlide] = useState(0);
-  const length = slides.length;
+import "swiper/swiper.min.css";
+import "swiper/components/navigation/navigation.min.css"
+import "./home.scss";
+import SwiperCore, {Navigation} from 'swiper/core';
 
-  const nextSlide = () => {
-    setNextSlide(current === length - 1 ? 0 : current + 1);
-  };
+SwiperCore.use([Navigation]);
 
-  const prevSlide = () => {
-    setNextSlide(current === 0 ? length - 1 : current - 1);
-  };
 
-  if (!Array.isArray(slides) || slides.length <= 0) {
-    return null;
-  }
+const Slider = () => {
+
+
 
   return (
-    <section className='slider'>
-      <FaArrowAltCircleLeft className='arrow left-arrow' onClick={prevSlide} />
-      <FaArrowAltCircleRight className='arrow right-arrow' onClick={nextSlide} />
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? 'slide active' : 'slide'}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide.image} alt='travle' className='image' />
-            )}
-          </div>
-        );
-      })}
-    </section>
-  );
-};
-
-export default ImageSlider;
+    <>
+      <Swiper navigation={true} className="mySwiper">
+        <SwiperSlide>Slide 1</SwiperSlide><SwiperSlide>Slide 2</SwiperSlide><SwiperSlide>Slide 3</SwiperSlide><SwiperSlide>Slide 4</SwiperSlide><SwiperSlide>Slide 5</SwiperSlide><SwiperSlide>Slide 6</SwiperSlide><SwiperSlide>Slide 7</SwiperSlide><SwiperSlide>Slide 8</SwiperSlide><SwiperSlide>Slide 9</SwiperSlide>
+      </Swiper>
+    </>
+  )
+}
+export default Slider

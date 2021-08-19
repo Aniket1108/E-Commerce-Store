@@ -4,7 +4,7 @@ import "./navbar.scss"
 
 export const Navbar = () => {
 
-    const [mobileMenu, setMobileMenu] = useState(true)
+    const [mobileMenu, setMobileMenu] = useState(false)
 
     return (
         <div className="Navbar">
@@ -17,7 +17,7 @@ export const Navbar = () => {
                 <div className="bar"></div>
             </div>
 
-            <div className="logo">Infoware</div>
+            <div className="logo">MotoSports</div>
             <div className={mobileMenu ? "list active" : "list"}>
                 <ul className="left">
                     <Link to="/" className="links">Home</Link>

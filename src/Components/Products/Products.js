@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom"
 import { ProductsData } from './ProductsData'
 import "./products.scss"
-import Navbar from "../Home/Navbar"
+import Navbar from "../Navbar/Navbar"
 const Products = () => {
     return (
     <>
