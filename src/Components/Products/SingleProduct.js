@@ -13,7 +13,7 @@ const SingleProduct = () => {
                     <div className="card" key={card.id}>
                         <img src={card.img} alt={card.name} />
                         <div className="info">
-                            <h2>{card.name}</h2>
+                            <h2>{card.name} <br/> <label className="label">{card.availability}</label> </h2>
                             <p className="price">{card.price} Rs</p>
                             <p>{card.description}</p>
                             <div>
@@ -24,9 +24,6 @@ const SingleProduct = () => {
                                 <h3>Reviews</h3>
                                 <p>{card.review}</p>
                             </div>
-                        </div>
-                        <div>
-                            
                         </div>
                     </div>
                 )

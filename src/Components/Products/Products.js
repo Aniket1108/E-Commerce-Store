@@ -1,15 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
-import { ProductsData } from './ProductsData'
-import "./products.scss"
-import Navbar from "../Navbar/Navbar"
-import Footer from "../Footer/Footer"
+import { ProductsData } from './ProductsData' 
+import "./products.scss" 
+
 
 const Products = () => {
     return (
 
         <div className="Products">
-            <div className="title">Products</div>
+            <div className="title">All Products</div>
             <div className="singleproduct">
                 {ProductsData.map((product) => {
                     return (

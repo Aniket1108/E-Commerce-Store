@@ -17,7 +17,7 @@ export const Navbar = () => {
                 <div className="bar"></div>
             </div>
 
-            <div className="logo">MotoSports</div>
+            <Link to="/" className="logo">MotoSports</Link>
             <div className={mobileMenu ? "list active" : "list"}>
                 <ul className="left">
                     <Link to="/" className="links">Home</Link>

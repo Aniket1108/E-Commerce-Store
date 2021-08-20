@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { AiOutlineShoppingCart } from "react-icons/ai"
+
 
 import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
@@ -17,7 +19,7 @@ SwiperCore.use([Pagination, Navigation]);
 
 export default function App() {
 
-    
+
     return (
         <div className="pricesort">
             <Swiper
@@ -47,14 +49,20 @@ export default function App() {
                 }}
                 className="mySwiper"
             >
-            
+
                 {ProductsData.filter(product => product.price < 1500).map((product) => {
                     return (
                         <SwiperSlide>
                             <div className="card">
                                 <img src={product.img} alt={product.name} />
-                                <Link className="link" to={`/product/${product.id}`}>{product.name} </Link>
-                                <div> {product.price} Rs</div>
+                                <div className="data">
+                                    <div>
+
+                                        <Link className="link" to={`/product/${product.id}`}>{product.name} </Link>
+                                        <div> {product.price} Rs</div>
+                                    </div>
+                                    <i><AiOutlineShoppingCart /></i>
+                                </div>
                             </div>
                         </SwiperSlide>
                     )

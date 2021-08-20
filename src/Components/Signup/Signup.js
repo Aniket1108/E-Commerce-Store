@@ -33,7 +33,7 @@ const Signup = () => {
                     <span class="placeholder">Password</span>
                 </div>
                 <button className="btn signup">Signup</button>
-                <p>Forgot Password?</p>
+                
             </div>
 
 

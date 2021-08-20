@@ -7,9 +7,9 @@ import "swiper/components/navigation/navigation.min.css"
 import "./home.scss";
 import SwiperCore, { Navigation } from 'swiper/core';
 
-import home from "../../img/home.png"
-import kawasaki from "../../img/kawasaki.jpg"
-import gear from "../../img/gear.png"
+import home2 from "../../img/home2.jpg"
+import home3 from "../../img/home3.jpg" 
+// import home4 from "../../img/home4.jpg"
 
 
 SwiperCore.use([Navigation]);
@@ -21,13 +21,13 @@ const Slider = () => {
 
 
   return (
-    <>
+    <div className="slider">
       <Swiper navigation={true} className="mySwiper">
-        <SwiperSlide><img src={home} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={kawasaki} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={gear} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={home2} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={home3} alt="" /></SwiperSlide>
+        {/* <SwiperSlide><img src={home4} alt="" /></SwiperSlide> */}
       </Swiper>
-    </>
+    </div>
   )
 }
 export default Slider

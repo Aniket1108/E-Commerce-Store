@@ -1,6 +1,7 @@
 .Signup {
     margin: 25px auto;
     width: 80%;
+    min-height: 70vh;
 
     display: flex;
 
@@ -21,7 +22,7 @@
         flex-direction: column;
         justify-content: space-between;
         width: 50%;
-        // height: 300px;
+        height: 350px;
     }
 
     .box {
